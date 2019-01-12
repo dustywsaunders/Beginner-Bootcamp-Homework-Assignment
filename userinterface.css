@@ -1,19 +1,88 @@
 
 /* UI */
 
+body {
+    background-color: black;
+}
+
+.userInterface {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    background: lightblue;
+    width: 90vw;
+    margin: 2rem;
+    border-radius: 5px; 
+}
+
+.heading {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+h2 {
+    color: black;
+    font-size: 2rem;
+}
+
+input {
+    font-style: italic;
+    width: 25rem;
+    height: 4rem;
+    font-size: 3rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+
+input:focus {
+    background-color: transparent;
+    background: transparent;
+}
+
+button {
+    margin-top: 0.5rem;
+    background-color: lightblue;
+    border: none;
+}
+
+button:hover, button:focus {
+    color:white;
+    background-color: black;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px 0px grey;
+}
+
 .action {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
-
 img {
-    height: 20vw;
-    width: 20vw;
+    height:15vw;
+    width: 15vw;
 };
+
+img:hover {
+    transform: scale(1.2);
+}
 
 .inputField {
     display: inline;
 };
+
+p {
+    color: white;
+}
+
+span {
+    color: red
+}
+
+.space {
+    margin-bottom: 10rem;
+}
