@@ -9,36 +9,62 @@
 // Hero object should have a weapon is an object with a type which is a string and damage which is 2
 
 const hero = {
-    name: 'Parzival',
+    name: '',
     heroic: true,
     inventory: [],
     health: 10,
     weapon: {
-        type: 'zanbato',
+        type: '',
         damage: 2,
     }
 };
 
-// 
+
+// WEAPON OBJECT
+
+const weapon = {
+    type: 'dagger',
+    damage: 2,
+};
+
+// console.log(hero);
+// console.log(weapon);
 
 // GAME LOGIC FUNCTIONS
 // Functions `rest, pickUpItem and equipWeapon` are all defined
 
-function rest(object) {
-    object.health = 10;
-    return object;
+// RESTING
+// rest function takes an object as an argument
+// AND (re)assigns the health property of the object the value 10
+// UI for rest
+    // There is a IMG element with the id `inn`
+    // When clicked will reset the `health` property on the hero global variable to 10
+
+function rest(tiredObject) {
+    tiredObject.health = 10;
+    return tiredObject;
 };
 
 // rest(hero);
 
-function pickUpItem() {
+// PICKING UP ITEMS
+// pickUpItem function takes a hero-like object as the first argument and an object as the second argument
+// Adds the weapon object as the last element of the inventory array of the hero-like object
+// UI for loot
+    // There is a IMG element with the id `dagger`
+    // When the dagger is clicked it will add a weapon-like object to the inventory array with `type`: `dagger` and `damage`: 2
 
+function pickUpItem(heroObject, lootObject) {
+    heroObject.inventory.push(lootObject);
 };
 
-function equipWeapon() {
+// pickUpItem(hero, weapon);
 
+// EEQUIP WEAPON
+// equipWeapon function takes a hero-like object as an argument
+// and reassigns the `weapon` property to the first element of the inventory array
+
+function equipWeapon(heroObject) {
+    heroObject.weapon = heroObject.inventory[0];
 };
 
-// RESTING
-// rest function takes an object as an argument
-// AND (re)assigns the health property of the object the value 10
