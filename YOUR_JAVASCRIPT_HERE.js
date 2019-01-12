@@ -118,7 +118,7 @@ function displayStats (hero) {
     };
 
     if (!name) {
-    document.getElementById("currentName").innerText = `please register your character`;
+    document.getElementById("currentName").innerText = `please enter your name`;
     document.getElementById("currentHealth").innerText = `${health} hp`;
     document.getElementById("currentWeaponType").innerText = weaponType;
     document.getElementById("currentDamage").innerText = damage;

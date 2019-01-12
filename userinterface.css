@@ -2,13 +2,13 @@
 /* UI */
 
 body {
-    background-color: dimgray;
+    background-color: black;
 }
 
 .userInterface {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
-    background: lightcyan;
+    background: paleturquoise;
     width: 90vw;
     margin: 2rem;
     border-radius: 5px; 
@@ -21,15 +21,16 @@ body {
 }
 
 h2 {
-    color: black;
+    color: dimgray;
     font-size: 2rem;
 }
 
 input {
     font-style: italic;
-    width: 25rem;
+    width: 30rem;
     height: 4rem;
     font-size: 3rem;
+    color: orangered;
     text-align: center;
     background: transparent;
     border: none;
@@ -58,33 +59,35 @@ button:hover, button:focus {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
 img {
-    height:15vw;
+    height: 15vw;
     width: 15vw;
-};
+}
 
-img:hover {
-    transform: scale(1.2);
+div.action img:hover {
+    transform: scale(1.1);
 }
 
 .inputField {
     display: inline;
-};
-
-.stats {
-    margin: 0.5rem;
 }
 
 p {
-    color: dimgrey;
+    color: dimgray;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 span {
-    color: red
+    color: orangered;
+}
+
+div.stats {
+    padding-bottom: 1rem;
 }
 
 .space {
