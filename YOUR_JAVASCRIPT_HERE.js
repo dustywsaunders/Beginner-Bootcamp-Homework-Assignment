@@ -9,7 +9,7 @@
 // Hero object should have a weapon is an object with a type which is a string and damage which is 2
 
 const hero = {
-    name: 'Dusty',
+    name: '',
     heroic: true,
     inventory: [],
     health: 10,
@@ -18,7 +18,6 @@ const hero = {
         damage: 2,
     }
 };
-
 
 // WEAPON OBJECT
 
@@ -82,17 +81,22 @@ function equipWeapon(hero) {
 // repost updated stats whenever something has changed
 
 function displayStats (hero) {
-    const name = hero.name;
+    let name = hero.name;
     const health = hero.health;
     const weaponType = hero.weapon.type;
     const damage = hero.weapon.damage;
+    const newName = document.getElementById("playerName").value;
+    
+    if (newName) {
+        name = newName
+    };
 
     if (!name) {
-    document.getElementById("currentName").innerText = `A very brave Hero!`;
+    document.getElementById("currentName").innerText = `please register your character`;
     document.getElementById("currentHealth").innerText = `${health} hp`;
     document.getElementById("currentWeaponType").innerText = weaponType;
     document.getElementById("currentDamage").innerText = damage;
-    } else {
+    } else {;
     document.getElementById("currentName").innerText = `${name}, the Amazing!`;
     document.getElementById("currentHealth").innerText = `${health} hp`;
     document.getElementById("currentWeaponType").innerText = weaponType;

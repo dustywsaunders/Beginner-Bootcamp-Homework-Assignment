@@ -13,13 +13,25 @@
   <section class = "userInterface">
     <!-- HEADING -->
     <div class = "heading">
-      <h2>Welcome to the amazing adventures of a nameless Hero!</h2>
+      <H2>welcome to the amazing adventures of...</H2>
+      <form class="inputField" onsubmit="displayStats(hero); return false">
+        <div class="formSection">
+          <input type="text" id="playerName" placeholder="enter your name">
+        </div>
+        <div class="button">
+          <button type="default">FOR THE HORDE!</button>
+        </div>
+      </form>
     </div>
+
+    <!-- <div class = "heading">
+        <h2>Welcome to the amazing adventures of <input type="text" value="Dusty" placeholder="please enter your hero's name" id="playerName" style="width: 20rem; height: 2rem"/>!</h2>
+      </div> -->
 
     <!-- REST/WEAPON/EQUIP -->
     <div class = "action">
-      <img id = "inn" src = "images/inn.svg" onclick="rest(hero); displayStats(hero); return true" alt = "rest" title = "return to the inn to recover 10hp">
-      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); displayStats(hero); return true" alt = "dagger" title = "add the dagger to your inventory">
+      <img id = "inn" src = "images/inn.svg" onclick="rest(hero); displayStats(hero); return true" alt = "rest" title = "use health potion to recover 10hp">
+      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); displayStats(hero); return true" alt = "dagger" title = "add loot to your inventory">
       <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); displayStats(hero); return true" alt = "it's a satchel!" title = "equip your weapon">  
     </div>
 
