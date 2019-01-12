@@ -2,13 +2,13 @@
 /* UI */
 
 body {
-    background-color: black;
+    background-color: dimgray;
 }
 
 .userInterface {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
-    background: lightblue;
+    background: lightcyan;
     width: 90vw;
     margin: 2rem;
     border-radius: 5px; 
@@ -75,8 +75,12 @@ img:hover {
     display: inline;
 };
 
+.stats {
+    margin: 0.5rem;
+}
+
 p {
-    color: white;
+    color: dimgrey;
 }
 
 span {
