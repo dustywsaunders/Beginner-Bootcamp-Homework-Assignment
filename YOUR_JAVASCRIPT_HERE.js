@@ -63,8 +63,15 @@ function pickUpItem(heroObject, lootObject) {
 // EEQUIP WEAPON
 // equipWeapon function takes a hero-like object as an argument
 // and reassigns the `weapon` property to the first element of the inventory array
+// UI for equipWeapon
+    // There is a IMG element with the id `bag`
+    // When the bag is clicked it will equip the hero with the first item in the inventory array
 
 function equipWeapon(heroObject) {
-    heroObject.weapon = heroObject.inventory[0];
+    
+    if (heroObject.inventory.length > 0) {
+        heroObject.weapon = heroObject.inventory[0];
+    };
 };
 
+// equipWeapon(hero);
