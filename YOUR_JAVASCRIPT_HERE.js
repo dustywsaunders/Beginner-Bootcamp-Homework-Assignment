@@ -74,7 +74,27 @@ function equipWeapon(hero) {
     };
 };
 
+// SHOW EQUIPMENT
+function showInv(newImage) {
+
+    let image = document.getElementById('dagger');
+
+    if (hero.inventory.length > 0) {
+        image.src = newImage;
+    }
+}
+
 // equipWeapon(hero);
+
+// ATTACK ENEMY
+function attackEnemy(newImage) {
+
+    let image = document.getElementById('enemy');
+
+    if (hero.weapon === hero.inventory[0]) {
+        image.src = newImage;
+    }
+}
 
 // DISPLAY STATS FUNCTION
 // function to write stats to page
@@ -86,6 +106,12 @@ function displayStats (hero) {
     const weaponType = hero.weapon.type;
     const damage = hero.weapon.damage;
     const newName = document.getElementById("playerName").value;
+
+    if (hero.inventory.length < 1) {
+        document.getElementById("currentInv").innerText = "your satchel is empty"
+    } else {
+        document.getElementById("currentInv").innerText = "dagger added to satchel";
+    }
     
     if (newName) {
         name = newName

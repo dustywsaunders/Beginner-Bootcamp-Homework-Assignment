@@ -31,15 +31,17 @@
     <!-- REST/WEAPON/EQUIP -->
     <div class = "action">
       <img id = "inn" src = "images/inn.svg" onclick="rest(hero); displayStats(hero); return true" alt = "rest" title = "use health potion to recover 10hp">
-      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); displayStats(hero); return true" alt = "dagger" title = "add loot to your inventory">
-      <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); displayStats(hero); return true" alt = "it's a satchel!" title = "equip your weapon">  
+      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); showInv('images/inv.svg'); displayStats(hero); return true" alt = "satchel" title = "add loot to your inventory">
+      <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); displayStats(hero); return true" alt = "pointy stick" title = "equip your weapon">  
+      <img id = "enemy" src = "images/enemy.svg" onclick="attackEnemy('images/kill.svg'); return true" alt = "monster!" title = "an enemy appears...ATTACK!">  
     </div>
 
     <!-- PLAYER STATS   -->
     <div class = "stats">
       <p id = "name">Name: <span id = "currentName"></span></p>
       <p id = "health">Health: <span id = "currentHealth"></span></p>
-      <p id = "waeponType">Weapon: <span id = "currentWeaponType"></span></p>
+      <p id = "inventory">Inventory: <span id = "currentInv"></span></p>
+      <p id = "waeponType">Equipped Weapon: <span id = "currentWeaponType"></span></p>
       <p id = "weaponDamage">Damage: <span id = "currentDamage"></span></p>
     </div>
   </section>
