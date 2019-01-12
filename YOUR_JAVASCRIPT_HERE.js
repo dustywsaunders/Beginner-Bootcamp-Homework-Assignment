@@ -9,7 +9,7 @@
 // Hero object should have a weapon is an object with a type which is a string and damage which is 2
 
 const hero = {
-    name: '',
+    name: 'Dusty',
     heroic: true,
     inventory: [],
     health: 10,
@@ -40,9 +40,10 @@ const weapon = {
     // There is a IMG element with the id `inn`
     // When clicked will reset the `health` property on the hero global variable to 10
 
-function rest(tiredObject) {
-    tiredObject.health = 10;
-    return tiredObject;
+function rest(hero) {
+    hero.health = 10;
+    // displayStats(hero);
+    return hero;
 };
 
 // rest(hero);
@@ -54,8 +55,8 @@ function rest(tiredObject) {
     // There is a IMG element with the id `dagger`
     // When the dagger is clicked it will add a weapon-like object to the inventory array with `type`: `dagger` and `damage`: 2
 
-function pickUpItem(heroObject, lootObject) {
-    heroObject.inventory.push(lootObject);
+function pickUpItem(hero, lootObject) {
+    hero.inventory.push(lootObject);
 };
 
 // pickUpItem(hero, weapon);
@@ -67,11 +68,36 @@ function pickUpItem(heroObject, lootObject) {
     // There is a IMG element with the id `bag`
     // When the bag is clicked it will equip the hero with the first item in the inventory array
 
-function equipWeapon(heroObject) {
+function equipWeapon(hero) {
     
-    if (heroObject.inventory.length > 0) {
-        heroObject.weapon = heroObject.inventory[0];
+    if (hero.inventory.length > 0) {
+        hero.weapon = hero.inventory[0];
     };
 };
 
 // equipWeapon(hero);
+
+// DISPLAY STATS FUNCTION
+// function to write stats to page
+// repost updated stats whenever something has changed
+
+function displayStats (hero) {
+    const name = hero.name;
+    const health = hero.health;
+    const weaponType = hero.weapon.type;
+    const damage = hero.weapon.damage;
+
+    if (!name) {
+    document.getElementById("currentName").innerText = `A very brave Hero!`;
+    document.getElementById("currentHealth").innerText = `${health} hp`;
+    document.getElementById("currentWeaponType").innerText = weaponType;
+    document.getElementById("currentDamage").innerText = damage;
+    } else {
+    document.getElementById("currentName").innerText = `${name}, the Amazing!`;
+    document.getElementById("currentHealth").innerText = `${health} hp`;
+    document.getElementById("currentWeaponType").innerText = weaponType;
+    document.getElementById("currentDamage").innerText = damage;
+    }
+};
+
+// displayStats(hero);

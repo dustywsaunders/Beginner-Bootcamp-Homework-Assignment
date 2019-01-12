@@ -10,25 +10,27 @@
 
   <!-- YOUR HTML HERE -->
 
-  <!-- REST -->
-
   <section class = "userInterface">
-    <div class = "rest">
-      <img id = "inn" src = "images/inn.svg" onclick="rest(hero); return true" alt = "rest" title = "return to the inn to recover 10hp">
+    <!-- HEADING -->
+    <div class = "heading">
+      <h2>Welcome to the amazing adventures of a nameless Hero!</h2>
     </div>
 
-    <!-- PICK UP ITEM -->
-
-    <div class = "weapon">
-      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); return true" alt = "dagger" title = "add the dagger to your inventory">
+    <!-- REST/WEAPON/EQUIP -->
+    <div class = "action">
+      <img id = "inn" src = "images/inn.svg" onclick="rest(hero); displayStats(hero); return true" alt = "rest" title = "return to the inn to recover 10hp">
+      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); displayStats(hero); return true" alt = "dagger" title = "add the dagger to your inventory">
+      <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); displayStats(hero); return true" alt = "it's a satchel!" title = "equip your weapon">  
     </div>
 
-    <!-- EQUIP WEAPON -->
-
-    <div class = "equip">
-      <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); return true" alt = "it's a satchel!" title = "equip your weapon">
+    <!-- PLAYER STATS   -->
+    <div class = "stats">
+      <p id = "name">Name: <span id = "currentName"></span></p>
+      <p id = "health">Health: <span id = "currentHealth"></span></p>
+      <p id = "waeponType">Weapon: <span id = "currentWeaponType"></span></p>
+      <p id = "weaponDamage">Damage: <span id = "currentDamage"></span></p>
     </div>
-</section>
+  </section>
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->

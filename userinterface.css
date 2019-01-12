@@ -1,14 +1,16 @@
 
 /* UI */
 
-.userInterface {
+.action {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
 img {
-    height: 100px;
-    width: 100px;
+    height: 20vw;
+    width: 20vw;
 };
 
