@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="userinterface.css">
 </head>
 <body>
 
@@ -11,21 +12,23 @@
 
   <!-- REST -->
 
-  <div class = 'rest'>
-    <img id = 'inn' onclick="rest(hero); return true">
-  </div>
+  <section class = "userInterface">
+    <div class = "rest">
+      <img id = "inn" src = "images/inn.svg" onclick="rest(hero); return true" alt = "rest" title = "return to the inn to recover 10hp">
+    </div>
 
-  <!-- PICK UP ITEM -->
+    <!-- PICK UP ITEM -->
 
-  <div class = 'loot'>
-    <img id = 'dagger' onclick="pickUpItem(hero, weapon); return true">
-  </div>
+    <div class = "weapon">
+      <img id = "dagger" src = "images/bag.svg" onclick="pickUpItem(hero, weapon); return true" alt = "dagger" title = "add the dagger to your inventory">
+    </div>
 
-  <!-- EQUIP WEAPON -->
+    <!-- EQUIP WEAPON -->
 
-  <div class = 'equip'>
-    <img id = 'bag' onclick="equipWeapon(hero); return true">
-  </div>
+    <div class = "equip">
+      <img id = "bag" src = "images/dagger.svg" onclick="equipWeapon(hero); return true" alt = "it's a satchel!" title = "equip your weapon">
+    </div>
+</section>
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
